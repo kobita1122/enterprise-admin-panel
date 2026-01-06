@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enterprise Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Admin Login</h2>
+  <input type="password" id="password" placeholder="Enter password">
+  <button onclick="login()">Login</button>
+  <p id="error"></p>
+</div>
+
+<div id="app" style="display:none;">
+  <h1>Enterprise Admin Panel</h1>
+
+  <nav>
+    <button onclick="show('dashboard')">Dashboard</button>
+    <button onclick="show('users')">Users</button>
+    <button onclick="show('logs')">Audit Logs</button>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <section id="dashboard" class="page">
+    <h2>Dashboard</h2>
+    <p>System status: Running</p>
+  </section>
+
+  <section id="users" class="page" style="display:none;">
+    <h2>User Management</h2>
+    <ul>
+      <li>Admin</li>
+      <li>Manager</li>
+      <li>User</li>
+    </ul>
+  </section>
+
+  <section id="logs" class="page" style="display:none;">
+    <h2>Audit Logs</h2>
+    <p>No critical activity found.</p>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
